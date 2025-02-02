@@ -1,7 +1,7 @@
 import cv2
 import easyocr
 
-image = cv2.imread('../assets/ktp_sample_2.jpg')
+image = cv2.imread('../assets/ktp_sample_1.jpg')
 
 # Preprocessing
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # Convert to grayscale

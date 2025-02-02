@@ -2,7 +2,7 @@ import cv2
 import pytesseract
 from pytesseract import Output
 
-image = cv2.imread('../assets/ktp_sample_2.webp')
+image = cv2.imread('../assets/ktp_sample_1.webp')
 
 # Preprocessing
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)  # Convert to grayscale
