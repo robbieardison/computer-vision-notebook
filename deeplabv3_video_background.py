@@ -32,6 +32,8 @@ def generate_mask(model: torch.nn.Module, frame: cv2.Mat) -> cv2.Mat:
     mask = output_predictions.byte().cpu().numpy()
     mask = cv2.resize(mask, (frame.shape[1], frame.shape[0]))
     mask = mask.astype('uint8')  # Ensure mask is in CV_8U format
+        # Binarize the mask (without this, the foreground will be semi-transparent)
+    _, mask = cv2.threshold(mask, 0.5, 255, cv2.THRESH_BINARY)
     return mask
 
 # Composite foreground and new background
