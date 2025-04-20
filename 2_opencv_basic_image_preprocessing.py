@@ -2,9 +2,6 @@ import cv2
 
 # Load image
 img = cv2.imread('assets/camera/bandung_coffee_shop.jpeg')
-cv2.imshow('Original', img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
 
 # Convert to grayscale
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
