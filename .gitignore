@@ -1,2 +1,5 @@
 myenv
 assets
+.ipynb_checkpoints
+exp
+*.dat
