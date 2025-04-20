@@ -10,11 +10,15 @@ cap = cv2.VideoCapture(0)
 while True:
     ret, frame = cap.read()
 
+    if not ret:
+        break
+
     # Perform object detection
     results = model(frame)
 
     # Render results: boxes, labels, and confidence scores
-    frame = results.render()[0]  # Renders the bounding boxes and labels
+    for result in results:  # Iterate through the results
+        frame = result.plot()  # Use plot() to render the bounding boxes and labels
 
     # Show the frame
     cv2.imshow("YOLO Object Detection", frame)
