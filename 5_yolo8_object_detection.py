@@ -1,8 +1,9 @@
 import cv2
 from ultralytics import YOLO
 
-# Load YOLOv8 model (pre-trained)
-model = YOLO("yolov8n.pt")  # You can also use yolov8m.pt or yolov8l.pt for more power
+# Load YOLOv8 model 
+#model = YOLO("yolov8n.pt")  # You can also use yolov8m.pt or yolov8l.pt for more power
+model = YOLO("yolo12n.pt")  
 
 # Start webcam
 cap = cv2.VideoCapture(0)
